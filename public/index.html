@@ -1,89 +1,516 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Welcome to Firebase Hosting</title>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Klinik Marturia</title>
+    <meta content="" name="description" />
+    <meta content="" name="keywords" />
 
-    <!-- update the version number as needed -->
-    <script defer src="/__/firebase/10.12.2/firebase-app-compat.js"></script>
-    <!-- include only the Firebase features as you need -->
-    <script defer src="/__/firebase/10.12.2/firebase-auth-compat.js"></script>
-    <script defer src="/__/firebase/10.12.2/firebase-database-compat.js"></script>
-    <script defer src="/__/firebase/10.12.2/firebase-firestore-compat.js"></script>
-    <script defer src="/__/firebase/10.12.2/firebase-functions-compat.js"></script>
-    <script defer src="/__/firebase/10.12.2/firebase-messaging-compat.js"></script>
-    <script defer src="/__/firebase/10.12.2/firebase-storage-compat.js"></script>
-    <script defer src="/__/firebase/10.12.2/firebase-analytics-compat.js"></script>
-    <script defer src="/__/firebase/10.12.2/firebase-remote-config-compat.js"></script>
-    <script defer src="/__/firebase/10.12.2/firebase-performance-compat.js"></script>
-    <!-- 
-      initialize the SDK after all desired features are loaded, set useEmulator to false
-      to avoid connecting the SDK to running emulators.
-    -->
-    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+    <!-- Favicons -->
+    <link href="assets/img/favicon.png" rel="icon" />
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
 
-    <style media="screen">
-      body { background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
-      #message { background: white; max-width: 360px; margin: 100px auto 16px; padding: 32px 24px; border-radius: 3px; }
-      #message h2 { color: #ffa100; font-weight: bold; font-size: 16px; margin: 0 0 8px; }
-      #message h1 { font-size: 22px; font-weight: 300; color: rgba(0,0,0,0.6); margin: 0 0 16px;}
-      #message p { line-height: 140%; margin: 16px 0 24px; font-size: 14px; }
-      #message a { display: block; text-align: center; background: #039be5; text-transform: uppercase; text-decoration: none; color: white; padding: 16px; border-radius: 4px; }
-      #message, #message a { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
-      #load { color: rgba(0,0,0,0.4); text-align: center; font-size: 13px; }
-      @media (max-width: 600px) {
-        body, #message { margin-top: 0; background: white; box-shadow: none; }
-        body { border-top: 16px solid #ffa100; }
-      }
-    </style>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Vendor CSS Files -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <!-- Option 1: Include in HTML -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+      integrity="sha512-1cK78a1o+ht2JcaW6g8OXYwqpev9+6GqOkz9xmBN9iUUhIndKtxwILGWYOSibOKjLsEdjyjZvYDq/cZwNeak0w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/brands.min.css"
+      integrity="sha512-DJLNx+VLY4aEiEQFjiawXaiceujj5GA7lIY8CHCIGQCBPfsEG0nGz1edb4Jvw1LR7q031zS5PpPqFuPA8ihlRA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/glightbox/3.3.0/css/glightbox.css"
+      integrity="sha512-iQ3H4A+iyBTP8M4ypX5PrTt2S+G1zmRjf0k0uOASKlFHysV8TL9ZoQyVwPss0D12IBTMoDEHA8+bg8a1viS9Mg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
+
+    <!-- Main CSS File -->
+    <link href="assets/css/main.css" rel="stylesheet" />
+
+    <!-- =======================================================
+  * Template Name: Medilab
+  * Template URL: https://bootstrapmade.com/medilab-free-medical-bootstrap-theme/
+  * Updated: Jun 14 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
   </head>
-  <body>
-    <div id="message">
-      <h2>Welcome</h2>
-      <h1>Firebase Hosting Setup Complete</h1>
-      <p>You're seeing this because you've successfully setup Firebase Hosting. Now it's time to go build something extraordinary!</p>
-      <a target="_blank" href="https://firebase.google.com/docs/hosting/">Open Hosting Documentation</a>
-    </div>
-    <p id="load">Firebase SDK Loading&hellip;</p>
 
+  <body class="index-page">
+    <header id="header" class="header sticky-top">
+      <div class="topbar d-flex align-items-center">
+        <div
+          class="container d-flex justify-content-center justify-content-md-between"
+        >
+          <div class="contact-info d-flex align-items-center">
+            <i class="bi bi-envelope d-flex align-items-center"
+              ><a href="mailto:contact@example.com">contact@example.com</a></i
+            >
+            <i class="bi bi-phone d-flex align-items-center ms-4"
+              ><span>+1 5589 55488 55</span></i
+            >
+          </div>
+          <div class="social-links d-none d-md-flex align-items-center">
+            <a href="#" class="twitter"><i class="bi bi-twitter-x"></i></a>
+            <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+      </div>
+      <!-- End Top Bar -->
+
+      <div class="branding d-flex align-items-center">
+        <div
+          class="container position-relative d-flex align-items-center justify-content-between"
+        >
+          <a href="index.html" class="logo d-flex align-items-center me-auto">
+            <!-- Uncomment the line below if you also wish to use an image logo -->
+            <!-- <img src="assets/img/logo.png" alt=""> -->
+            <h1 class="sitename">Klinik Marturia</h1>
+          </a>
+
+          <nav id="navmenu" class="navmenu">
+            <ul>
+              <li>
+                <a href="index.html" class="active">Home<br /></a>
+              </li>
+              <!-- <li><a href="#about">About</a></li>
+              <li><a href="#services">Services</a></li>
+              <li><a href="#departments">Departments</a></li>
+              <li><a href="#doctors">Doctors</a></li>
+              <li><a href="#contact">Contact</a></li> -->
+            </ul>
+            <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+          </nav>
+
+          <a class="cta-btn d-none d-sm-block" href="login.html">Login</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="main">
+      <!-- Hero Section -->
+      <section id="hero" class="hero section">
+        <img src="assets/img/hero-bg.jpg" alt="" data-aos="fade-in" />
+
+        <div class="container position-relative">
+          <div
+            class="welcome position-relative"
+            data-aos="fade-down"
+            data-aos-delay="100"
+          >
+            <h2>WELCOME TO KLINIK MARTURIA</h2>
+            <p>"MARI BERBAGI KEHIDUPAN DENGAN SESAMA"</p>
+          </div>
+          <!-- End Welcome -->
+
+          <div class="content row gy-4">
+            <div class="col-lg-4 d-flex align-items-stretch">
+              <div class="why-box" data-aos="zoom-out" data-aos-delay="200">
+                <h3>Why Klinik Marturia?</h3>
+                <p>
+                  Klinik Marturia HKBP Kramat Jati Dewan Diakonia Seksi
+                  Kesehatan
+                </p>
+                <div class="text-center">
+                  <a href="#about" class="more-btn"
+                    ><span>Learn More</span> <i class="bi bi-chevron-right"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+            <!-- End Why Box -->
+
+            <div class="col-lg-8 d-flex align-items-stretch">
+              <div class="d-flex flex-column justify-content-center">
+                <div class="row gy-4">
+                  <div class="col-xl-4 d-flex align-items-stretch">
+                    <div
+                      class="icon-box"
+                      data-aos="zoom-out"
+                      data-aos-delay="300"
+                    >
+                      <i class="bi bi-clipboard-data"></i>
+                      <h4>Corporis voluptates officia eiusmod</h4>
+                      <p>
+                        Consequuntur sunt aut quasi enim aliquam quae harum
+                        pariatur laboris nisi ut aliquip
+                      </p>
+                    </div>
+                  </div>
+                  <!-- End Icon Box -->
+
+                  <div class="col-xl-4 d-flex align-items-stretch">
+                    <div
+                      class="icon-box"
+                      data-aos="zoom-out"
+                      data-aos-delay="400"
+                    >
+                      <i class="bi bi-gem"></i>
+                      <h4>Ullamco laboris ladore pan</h4>
+                      <p>
+                        Excepteur sint occaecat cupidatat non proident, sunt in
+                        culpa qui officia deserunt
+                      </p>
+                    </div>
+                  </div>
+                  <!-- End Icon Box -->
+
+                  <div class="col-xl-4 d-flex align-items-stretch">
+                    <div
+                      class="icon-box"
+                      data-aos="zoom-out"
+                      data-aos-delay="500"
+                    >
+                      <i class="bi bi-inboxes"></i>
+                      <h4>Labore consequatur incidid dolore</h4>
+                      <p>
+                        Aut suscipit aut cum nemo deleniti aut omnis. Doloribus
+                        ut maiores omnis facere
+                      </p>
+                    </div>
+                  </div>
+                  <!-- End Icon Box -->
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- End  Content-->
+        </div>
+      </section>
+      <!-- /Hero Section -->
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="container footer-top">
+        <div class="row gy-4">
+          <div class="col-lg-4 col-md-6 footer-about">
+            <a href="index.html" class="logo d-flex align-items-center">
+              <span class="sitename">Klinik Marturia</span>
+            </a>
+            <div class="footer-contact pt-3">
+              <p>Gereja HKBP, HKBP,</p>
+              <p>
+                Jl. Raya Jakarta-Bogor No.7 8, RT.3/RW.10, Kramat Jati, Kec.
+                Kramat jati, Kota Jakarta Timur, Daerah Khusus Ibukota Jakarta
+                13510
+              </p>
+              <p class="mt-3">
+                <strong>Phone:</strong> <span>+1 5589 55488 55</span>
+              </p>
+              <p><strong>Email:</strong> <span>info@example.com</span></p>
+            </div>
+            <div class="social-links d-flex mt-4">
+              <a href=""><i class="bi bi-twitter-x"></i></a>
+              <a href=""><i class="bi bi-facebook"></i></a>
+              <a href=""><i class="bi bi-instagram"></i></a>
+              <a href=""><i class="bi bi-linkedin"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-md-3 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About us</a></li>
+              <li><a href="#">Services</a></li>
+              <li><a href="#">Terms of service</a></li>
+              <li><a href="#">Privacy policy</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="container copyright text-center mt-4">
+        <p>
+          © <span>Copyright</span>
+          <strong class="px-1 sitename">Klinik Marturia</strong>
+          <span>All Rights Reserved</span>
+        </p>
+      </div>
+    </footer>
+
+    <!-- Scroll Top -->
+    <a
+      href="#"
+      id="scroll-top"
+      class="scroll-top d-flex align-items-center justify-content-center"
+      ><i class="bi bi-arrow-up-short"></i
+    ></a>
+
+    <!-- Preloader -->
+    <div id="preloader"></div>
+
+    <!-- Vendor JS Files -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/validate-js/2.0.1/validate.min.js"
+      integrity="sha512-8GLIg5ayTvD6F9ML/cSRMD19nHqaLPWxISikfc5hsMJyX7Pm+IIbHlhBDY2slGisYLBqiVNVll+71CYDD5RBqA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"
+      integrity="sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0aWb8zejytzS8wjo7PGEXKqJOrjQ4oORtnimIRZBtw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/glightbox/3.3.0/js/glightbox.min.js"
+      integrity="sha512-RBWI5Qf647bcVhqbEnRoL4KuUT+Liz+oG5jtF+HP05Oa5088M9G0GxG0uoHR9cyq35VbjahcI+Hd1xwY8E1/Kg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/@srexi/purecounterjs/dist/purecounter_vanilla.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"
+      integrity="sha512-Ysw1DcK1P+uYLqprEAzNQJP+J4hTx4t/3X2nbVwszao8wD+9afLjBQYjz7Uk4ADP+Er++mJoScI42ueGtQOzEA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <!-- Main JS File -->
     <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        const loadEl = document.querySelector('#load');
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-        // // The Firebase SDK is initialized and available here!
-        //
-        // firebase.auth().onAuthStateChanged(user => { });
-        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
-        // firebase.firestore().doc('/foo/bar').get().then(() => { });
-        // firebase.functions().httpsCallable('yourFunction')().then(() => { });
-        // firebase.messaging().requestPermission().then(() => { });
-        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
-        // firebase.analytics(); // call to activate
-        // firebase.analytics().logEvent('tutorial_completed');
-        // firebase.performance(); // call to activate
-        //
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+      /**
+       * Template Name: Medilab
+       * Template URL: https://bootstrapmade.com/medilab-free-medical-bootstrap-theme/
+       * Updated: Jun 14 2024 with Bootstrap v5.3.3
+       * Author: BootstrapMade.com
+       * License: https://bootstrapmade.com/license/
+       */
 
-        try {
-          let app = firebase.app();
-          let features = [
-            'auth', 
-            'database', 
-            'firestore',
-            'functions',
-            'messaging', 
-            'storage', 
-            'analytics', 
-            'remoteConfig',
-            'performance',
-          ].filter(feature => typeof app[feature] === 'function');
-          loadEl.textContent = `Firebase SDK loaded with ${features.join(', ')}`;
-        } catch (e) {
-          console.error(e);
-          loadEl.textContent = 'Error loading the Firebase SDK, check the console.';
+      (function () {
+        "use strict";
+
+        /**
+         * Apply .scrolled class to the body as the page is scrolled down
+         */
+        function toggleScrolled() {
+          const selectBody = document.querySelector("body");
+          const selectHeader = document.querySelector("#header");
+          if (
+            !selectHeader.classList.contains("scroll-up-sticky") &&
+            !selectHeader.classList.contains("sticky-top") &&
+            !selectHeader.classList.contains("fixed-top")
+          )
+            return;
+          window.scrollY > 100
+            ? selectBody.classList.add("scrolled")
+            : selectBody.classList.remove("scrolled");
         }
-      });
+
+        document.addEventListener("scroll", toggleScrolled);
+        window.addEventListener("load", toggleScrolled);
+
+        /**
+         * Mobile nav toggle
+         */
+        const mobileNavToggleBtn = document.querySelector(".mobile-nav-toggle");
+
+        function mobileNavToogle() {
+          document.querySelector("body").classList.toggle("mobile-nav-active");
+          mobileNavToggleBtn.classList.toggle("bi-list");
+          mobileNavToggleBtn.classList.toggle("bi-x");
+        }
+        mobileNavToggleBtn.addEventListener("click", mobileNavToogle);
+
+        /**
+         * Hide mobile nav on same-page/hash links
+         */
+        document.querySelectorAll("#navmenu a").forEach((navmenu) => {
+          navmenu.addEventListener("click", () => {
+            if (document.querySelector(".mobile-nav-active")) {
+              mobileNavToogle();
+            }
+          });
+        });
+
+        /**
+         * Toggle mobile nav dropdowns
+         */
+        document
+          .querySelectorAll(".navmenu .toggle-dropdown")
+          .forEach((navmenu) => {
+            navmenu.addEventListener("click", function (e) {
+              e.preventDefault();
+              this.parentNode.classList.toggle("active");
+              this.parentNode.nextElementSibling.classList.toggle(
+                "dropdown-active"
+              );
+              e.stopImmediatePropagation();
+            });
+          });
+
+        /**
+         * Preloader
+         */
+        const preloader = document.querySelector("#preloader");
+        if (preloader) {
+          window.addEventListener("load", () => {
+            preloader.remove();
+          });
+        }
+
+        /**
+         * Scroll top button
+         */
+        let scrollTop = document.querySelector(".scroll-top");
+
+        function toggleScrollTop() {
+          if (scrollTop) {
+            window.scrollY > 100
+              ? scrollTop.classList.add("active")
+              : scrollTop.classList.remove("active");
+          }
+        }
+        scrollTop.addEventListener("click", (e) => {
+          e.preventDefault();
+          window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+          });
+        });
+
+        window.addEventListener("load", toggleScrollTop);
+        document.addEventListener("scroll", toggleScrollTop);
+
+        /**
+         * Animation on scroll function and init
+         */
+        function aosInit() {
+          AOS.init({
+            duration: 600,
+            easing: "ease-in-out",
+            once: true,
+            mirror: false,
+          });
+        }
+        window.addEventListener("load", aosInit);
+
+        /**
+         * Initiate glightbox
+         */
+        const glightbox = Glightbox({
+          selector: ".glightbox",
+        });
+
+        /**
+         * Initiate Pure Counter
+         */
+        new PureCounter();
+
+        /**
+         * Frequently Asked Questions Toggle
+         */
+        document
+          .querySelectorAll(".faq-item h3, .faq-item .faq-toggle")
+          .forEach((faqItem) => {
+            faqItem.addEventListener("click", () => {
+              faqItem.parentNode.classList.toggle("faq-active");
+            });
+          });
+
+        /**
+         * Init swiper sliders
+         */
+        function initSwiper() {
+          document
+            .querySelectorAll(".init-swiper")
+            .forEach(function (swiperElement) {
+              let config = JSON.parse(
+                swiperElement.querySelector(".swiper-config").innerHTML.trim()
+              );
+
+              if (swiperElement.classList.contains("swiper-tab")) {
+                initSwiperWithCustomPagination(swiperElement, config);
+              } else {
+                new Swiper(swiperElement, config);
+              }
+            });
+        }
+
+        window.addEventListener("load", initSwiper);
+
+        /**
+         * Correct scrolling position upon page load for URLs containing hash links.
+         */
+        window.addEventListener("load", function (e) {
+          if (window.location.hash) {
+            if (document.querySelector(window.location.hash)) {
+              setTimeout(() => {
+                let section = document.querySelector(window.location.hash);
+                let scrollMarginTop = getComputedStyle(section).scrollMarginTop;
+                window.scrollTo({
+                  top: section.offsetTop - parseInt(scrollMarginTop),
+                  behavior: "smooth",
+                });
+              }, 150);
+            }
+          }
+        });
+
+        /**
+         * Navmenu Scrollspy
+         */
+        let navmenulinks = document.querySelectorAll(".navmenu a");
+
+        function navmenuScrollspy() {
+          navmenulinks.forEach((navmenulink) => {
+            if (!navmenulink.hash) return;
+            let section = document.querySelector(navmenulink.hash);
+            if (!section) return;
+            let position = window.scrollY + 200;
+            if (
+              position >= section.offsetTop &&
+              position <= section.offsetTop + section.offsetHeight
+            ) {
+              document
+                .querySelectorAll(".navmenu a.active")
+                .forEach((link) => link.classList.remove("active"));
+              navmenulink.classList.add("active");
+            } else {
+              navmenulink.classList.remove("active");
+            }
+          });
+        }
+        window.addEventListener("load", navmenuScrollspy);
+        document.addEventListener("scroll", navmenuScrollspy);
+      })();
     </script>
   </body>
 </html>
